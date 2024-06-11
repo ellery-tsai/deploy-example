@@ -4,3 +4,13 @@
   hosts: all
 
   tasks:
+    - name: ping
+      ansible.builtin.ping:
+    - name: Display variable 
+      ansible.builtin.debug:
+        msg: "hello"
+    - name: Git checkout
+      ansible.builtin.git:
+        repo: 'https://github.com/ellery-tsai/deploy-example.git'
+        dest: /tmp/checkout
+        version: master
