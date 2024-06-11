@@ -11,6 +11,10 @@
       ansible.builtin.copy:
         src: files/index.html
         dest: /usr/share/nginx/html/index.html
+    - name: Append datetime
+      become: true
+      ansible.builtin.shell: |
+        date >>/usr/share/nginx/html/index.html
     - name: Display variable 
       ansible.builtin.debug:
         msg: "hello"
