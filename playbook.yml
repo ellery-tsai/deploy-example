@@ -6,6 +6,11 @@
   tasks:
     - name: ping
       ansible.builtin.ping:
+    - name: Copy static file
+      become: true
+      ansible.builtin.copy:
+        src: files/index.html
+        dest: /usr/share/nginx/html/index.html
     - name: Display variable 
       ansible.builtin.debug:
         msg: "hello"
