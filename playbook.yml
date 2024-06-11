@@ -1,0 +1,6 @@
+---
+# Deploy example
+- name: Deploy example
+  hosts: all
+
+  tasks:
